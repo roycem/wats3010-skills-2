@@ -24,12 +24,31 @@ li {
     border: 1px solid darkgray;
 }
 
+:root {
+    --odd-color: #d46843;
+    --odd-bg-color: #2A150D;
+
+    --even-color: white;
+    --even-bg-color: black;
+}
+
+li:nth-child(even) {
+    color: var(--even-color);
+    color: var(--even-bg-color);
+}
+
+li:nth-child(odd) {
+    color: var(--odd-color);
+    background-color: var(--odd-bg-color);
+}
+
 @media only screen and (min-width: 700px) {
     body {
         background-color: lightblue;
     }
+
     li {
         width: 19%;
         display: inline-block;
-      }
+    }
 }
